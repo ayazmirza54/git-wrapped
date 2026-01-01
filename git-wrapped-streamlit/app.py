@@ -222,15 +222,9 @@ st.markdown("""
 # ========================================
 
 def render_stat_card(value, label, emoji=""):
-    """Render a statistics card"""
-    emoji_html = f'<div class="stats-emoji">{emoji}</div>' if emoji else ''
-    st.markdown(f"""
-        <div class="stats-card">
-            {emoji_html}
-            <div class="stats-value">{value:,}</div>
-            <div class="stats-label">{label}</div>
-        </div>
-    """, unsafe_allow_html=True)
+    """Render a statistics card using native Streamlit metric"""
+    display_label = f"{emoji} {label}" if emoji else label
+    st.metric(label=display_label, value=f"{value:,}")
 
 
 def render_personality_card(personality):
