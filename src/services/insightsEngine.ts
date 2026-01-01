@@ -447,7 +447,7 @@ function calculateScores(
 
 // Calculate developer personality
 function calculatePersonality(
-    events: GitHubEvent[],
+    _events: GitHubEvent[],
     repos: GitHubRepo[],
     activity: {
         mostProductiveHour: number;
