@@ -74,6 +74,11 @@ st.markdown("""
         box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
     }
     
+    .stats-emoji {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
     .stats-value {
         font-size: 2.5rem;
         font-weight: bold;
@@ -218,9 +223,11 @@ st.markdown("""
 
 def render_stat_card(value, label, emoji=""):
     """Render a statistics card"""
+    emoji_html = f'<div class="stats-emoji">{emoji}</div>' if emoji else ''
     st.markdown(f"""
         <div class="stats-card">
-            <div class="stats-value">{emoji} {value:,}</div>
+            {emoji_html}
+            <div class="stats-value">{value:,}</div>
             <div class="stats-label">{label}</div>
         </div>
     """, unsafe_allow_html=True)
