@@ -1,0 +1,309 @@
+/* ========================================
+   Landing Page Styles
+   ======================================== */
+
+.landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background */
+.landing__bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.landing__bg-gradient {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    animation: float 8s ease-in-out infinite;
+}
+
+.landing__bg-gradient--1 {
+    width: 600px;
+    height: 600px;
+    background: var(--accent-purple);
+    top: -200px;
+    right: -200px;
+}
+
+.landing__bg-gradient--2 {
+    width: 500px;
+    height: 500px;
+    background: var(--accent-blue);
+    bottom: -200px;
+    left: -200px;
+    animation-delay: -3s;
+}
+
+.landing__bg-gradient--3 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-pink);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -5s;
+}
+
+.landing__bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Content */
+.landing__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Header */
+.landing__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: var(--space-6);
+}
+
+.landing__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+}
+
+.landing__github-icon {
+    color: var(--text-primary);
+}
+
+/* Hero */
+.landing__hero {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.landing__title {
+    font-size: var(--text-6xl);
+    font-weight: var(--font-extrabold);
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-4);
+}
+
+.landing__subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+}
+
+/* Form Card */
+.landing__form-card {
+    width: 100%;
+    padding: var(--space-8);
+}
+
+.landing__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.landing__year-select {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.landing__year-label {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-weight: var(--font-medium);
+}
+
+.landing__year-buttons {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.landing__year-btn {
+    flex: 1;
+    padding: var(--space-2) var(--space-3);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    font-family: var(--font-mono);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.landing__year-btn:hover {
+    background: var(--glass-bg-hover);
+    color: var(--text-primary);
+}
+
+.landing__year-btn--active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: #1a1a1a;
+}
+
+.landing__year-btn--active:hover {
+    background: var(--accent-blue-dark);
+}
+
+.landing__year-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Error */
+.landing__error {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    background: rgba(248, 81, 73, 0.1);
+    border: 1px solid rgba(248, 81, 73, 0.3);
+    border-radius: var(--radius-md);
+    color: var(--accent-red);
+    font-size: var(--text-sm);
+    margin-top: var(--space-4);
+}
+
+/* Loading */
+.landing__loading {
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 17, 23, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Features */
+.landing__features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+}
+
+.landing__feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.landing__feature-icon {
+    font-size: var(--text-base);
+}
+
+/* Footer */
+.landing__footer {
+    margin-top: auto;
+    padding-top: var(--space-8);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.landing__footer a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    margin-left: var(--space-1);
+}
+
+.landing__footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .landing__content {
+        padding: var(--space-4);
+    }
+
+    .landing__title {
+        font-size: var(--text-4xl);
+    }
+
+    .landing__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .landing__subtitle br {
+        display: none;
+    }
+
+    .landing__form-card {
+        padding: var(--space-5);
+    }
+
+    .landing__year-buttons {
+        flex-wrap: wrap;
+    }
+
+    .landing__features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing {
+        padding: var(--space-2);
+    }
+
+    .landing__content {
+        padding: var(--space-3);
+    }
+
+    .landing__header {
+        padding: var(--space-3);
+    }
+
+    .landing__title {
+        font-size: var(--text-3xl);
+    }
+
+    .landing__form-card {
+        padding: var(--space-4);
+    }
+
+    .landing__year-btn {
+        font-size: var(--text-xs);
+        padding: var(--space-2);
+    }
+}

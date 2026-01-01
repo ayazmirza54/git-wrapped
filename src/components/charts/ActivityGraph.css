@@ -1,0 +1,86 @@
+/* ========================================
+   Activity Graph Styles
+   ======================================== */
+
+.activity-graph {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-graph__svg {
+    flex: 1;
+    width: 100%;
+}
+
+.activity-graph__area {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.3s;
+}
+
+.activity-graph__line {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawLine 2s ease forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.activity-graph__point {
+    opacity: 0;
+    transform-origin: center;
+    animation: pointPop 0.3s ease forwards;
+}
+
+@keyframes pointPop {
+    0% {
+        opacity: 0;
+        r: 0;
+    }
+
+    50% {
+        r: 2.5;
+    }
+
+    100% {
+        opacity: 1;
+        r: 1.5;
+    }
+}
+
+.activity-graph__labels {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-2) 0;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.activity-graph__label {
+    text-align: center;
+    min-width: 30px;
+}
+
+.activity-graph__values {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.activity-graph__value-badge {
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    background: var(--glass-bg);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}

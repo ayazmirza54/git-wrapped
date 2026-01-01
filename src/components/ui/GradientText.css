@@ -1,0 +1,43 @@
+/* ========================================
+   GradientText Component Styles
+   ======================================== */
+
+.gradient-text {
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text--primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gradient-text--green {
+    background: var(--gradient-green);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gradient-text--warm {
+    background: var(--gradient-warm);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gradient-text--cool {
+    background: var(--gradient-cool);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gradient-text--aurora {
+    background: var(--gradient-aurora);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.gradient-text--animate {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}

@@ -1,0 +1,82 @@
+/* ========================================
+   Input Component Styles
+   ======================================== */
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.input-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: var(--text-base);
+    transition: all var(--transition-normal);
+}
+
+.input::placeholder {
+    color: var(--text-muted);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(133, 199, 242, 0.2);
+}
+
+/* Icon styles */
+.input-wrapper--icon-left .input {
+    padding-left: calc(var(--space-4) + 24px);
+}
+
+.input-wrapper--icon-right .input {
+    padding-right: calc(var(--space-4) + 24px);
+}
+
+.input-icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.input-icon--left {
+    left: var(--space-3);
+}
+
+.input-icon--right {
+    right: var(--space-3);
+}
+
+/* Error state */
+.input-wrapper--error .input {
+    border-color: var(--accent-red);
+}
+
+.input-wrapper--error .input:focus {
+    box-shadow: 0 0 0 3px rgba(248, 81, 73, 0.2);
+}
+
+.input-error {
+    font-size: var(--text-sm);
+    color: var(--accent-red);
+}

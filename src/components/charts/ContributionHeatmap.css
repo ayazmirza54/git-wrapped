@@ -1,0 +1,142 @@
+/* ========================================
+   Contribution Heatmap Styles
+   ======================================== */
+
+.heatmap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    overflow-x: auto;
+    padding: var(--space-2);
+}
+
+.heatmap__months {
+    display: grid;
+    grid-template-columns: 30px repeat(53, 1fr);
+    gap: 3px;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    margin-left: 2px;
+}
+
+.heatmap__month-label {
+    min-width: 30px;
+}
+
+.heatmap__grid-container {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.heatmap__days {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    min-width: 28px;
+}
+
+.heatmap__day-label {
+    height: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.heatmap__grid {
+    display: flex;
+    gap: 3px;
+}
+
+.heatmap__week {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.heatmap__cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    transition: transform var(--transition-fast);
+    animation: cellFadeIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.heatmap__cell:hover {
+    transform: scale(1.3);
+    outline: 2px solid var(--text-secondary);
+    outline-offset: 1px;
+}
+
+@keyframes cellFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contribution level colors */
+.heatmap__cell--none {
+    background: var(--contrib-none);
+}
+
+.heatmap__cell--low {
+    background: var(--contrib-low);
+}
+
+.heatmap__cell--medium {
+    background: var(--contrib-medium);
+}
+
+.heatmap__cell--high {
+    background: var(--contrib-high);
+}
+
+.heatmap__cell--max {
+    background: var(--contrib-max);
+}
+
+/* Legend */
+.heatmap__legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    padding-right: var(--space-2);
+}
+
+.heatmap__legend-cells {
+    display: flex;
+    gap: 3px;
+}
+
+.heatmap__legend .heatmap__cell {
+    animation: none;
+    opacity: 1;
+}
+
+.heatmap__legend .heatmap__cell:hover {
+    transform: none;
+    outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .heatmap__cell {
+        width: 10px;
+        height: 10px;
+    }
+
+    .heatmap__days {
+        display: none;
+    }
+}

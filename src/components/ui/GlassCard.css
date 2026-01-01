@@ -1,0 +1,45 @@
+/* ========================================
+   GlassCard Component Styles
+   ======================================== */
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    transition: all var(--transition-normal);
+}
+
+.glass-card--clickable {
+    cursor: pointer;
+}
+
+.glass-card--clickable:hover {
+    background: var(--glass-bg-hover);
+    border-color: var(--glass-border-hover);
+    transform: translateY(-2px);
+}
+
+.glass-card--glow {
+    box-shadow: var(--shadow-glow);
+}
+
+.glass-card--gradient-primary {
+    background: linear-gradient(135deg, rgba(133, 199, 242, 0.1) 0%, rgba(168, 180, 240, 0.1) 100%);
+    border-color: rgba(133, 199, 242, 0.2);
+}
+
+.glass-card--gradient-green {
+    background: linear-gradient(135deg, rgba(125, 211, 168, 0.1) 0%, rgba(154, 227, 191, 0.1) 100%);
+    border-color: rgba(125, 211, 168, 0.2);
+}
+
+.glass-card--gradient-warm {
+    background: linear-gradient(135deg, rgba(240, 184, 125, 0.1) 0%, rgba(240, 138, 138, 0.1) 100%);
+    border-color: rgba(240, 184, 125, 0.2);
+}
+
+.glass-card--animate {
+    animation: fadeInUp 0.5s ease forwards;
+}

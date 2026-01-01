@@ -1,0 +1,360 @@
+/* ========================================
+   GitHub Wrapped - Design System Variables
+   ======================================== 
+   
+   Color Palette:
+   - #D1D1D1 (Dust Grey) - Light text/accents
+   - #DBDBDB (Alabaster Grey) - Primary text
+   - #85C7F2 (Sky Blue) - Primary accent
+   - #636363 (Dim Grey) - Secondary text
+   - #4C4C4C (Charcoal) - Backgrounds/cards
+*/
+
+:root {
+    /* ===== Colors ===== */
+
+    /* Background Colors - Charcoal base */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2a2a2a;
+    --bg-tertiary: #3a3a3a;
+    --bg-card: rgba(76, 76, 76, 0.6);
+
+    /* Charcoal shades */
+    --charcoal: #4C4C4C;
+    --charcoal-dark: #3a3a3a;
+    --charcoal-light: #5a5a5a;
+
+    /* Text Colors */
+    --text-primary: #DBDBDB;
+    --text-secondary: #D1D1D1;
+    --text-muted: #636363;
+
+    /* Accent Colors - Sky Blue as primary */
+    --accent-primary: #85C7F2;
+    --accent-blue: #85C7F2;
+    --accent-blue-light: #a3d5f5;
+    --accent-blue-dark: #5fb3e8;
+
+    /* Supporting accents (derived from palette) */
+    --accent-green: #7dd3a8;
+    --accent-green-light: #9ae3bf;
+    --accent-purple: #a8b4f0;
+    --accent-pink: #e8a5c5;
+    --accent-orange: #f0b87d;
+    --accent-red: #f08a8a;
+    --accent-yellow: #e8d87d;
+
+    /* GitHub Contribution Colors - Muted blue-grey scale */
+    --contrib-none: #2a2a2a;
+    --contrib-low: #3d5a6e;
+    --contrib-medium: #5588a8;
+    --contrib-high: #6daed4;
+    --contrib-max: #85C7F2;
+
+    /* ===== Gradients ===== */
+    --gradient-primary: linear-gradient(135deg, #85C7F2 0%, #a8b4f0 50%, #e8a5c5 100%);
+    --gradient-green: linear-gradient(135deg, #7dd3a8 0%, #9ae3bf 100%);
+    --gradient-blue: linear-gradient(135deg, #5fb3e8 0%, #85C7F2 100%);
+    --gradient-warm: linear-gradient(135deg, #f0b87d 0%, #f08a8a 100%);
+    --gradient-cool: linear-gradient(135deg, #85C7F2 0%, #a8b4f0 100%);
+    --gradient-aurora: linear-gradient(135deg, #7dd3a8 0%, #85C7F2 50%, #a8b4f0 100%);
+    --gradient-dark: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
+    --gradient-card: linear-gradient(135deg, rgba(133, 199, 242, 0.1) 0%, rgba(168, 180, 240, 0.1) 100%);
+
+    /* ===== Glassmorphism ===== */
+    --glass-bg: rgba(76, 76, 76, 0.3);
+    --glass-bg-hover: rgba(99, 99, 99, 0.4);
+    --glass-border: rgba(209, 209, 209, 0.12);
+    --glass-border-hover: rgba(209, 209, 209, 0.25);
+    --glass-blur: blur(20px);
+
+    /* ===== Typography ===== */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    /* Font Sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+    --text-8xl: 6rem;
+    --text-9xl: 8rem;
+
+    /* Font Weights */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+
+    /* Line Heights */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+
+    /* ===== Spacing ===== */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+    --space-28: 7rem;
+    --space-32: 8rem;
+
+    /* ===== Border Radius ===== */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-3xl: 2rem;
+    --radius-full: 9999px;
+
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 40px rgba(133, 199, 242, 0.3);
+    --shadow-glow-green: 0 0 40px rgba(125, 211, 168, 0.3);
+
+    /* ===== Transitions ===== */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* ===== Z-Index Scale ===== */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-overlay: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(133, 199, 242, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(133, 199, 242, 0.6);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes countUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== Utility Classes ===== */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.5s ease forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.5s ease forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Delay utilities */
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}

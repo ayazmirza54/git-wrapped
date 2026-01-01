@@ -1,0 +1,64 @@
+/* ========================================
+   Language Chart Styles
+   ======================================== */
+
+.language-chart {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+}
+
+.language-chart__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    animation: slideInLeft 0.5s ease forwards;
+    opacity: 0;
+}
+
+.language-chart__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-chart__name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+}
+
+.language-chart__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.language-chart__percentage {
+    font-weight: var(--font-bold);
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.language-chart__bar-container {
+    height: 8px;
+    width: 100%;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.language-chart__bar {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 1s ease-out;
+}
+
+.language-chart__repos {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
